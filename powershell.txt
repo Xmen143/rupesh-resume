@@ -1,0 +1,84 @@
+Welcome to TutorialsPoint
+Hello i am rupesh here creating file adding text with powershell
+pip install certbot
+python.exe -m pip install --upgrade pip
+clear
+ls
+cd .\Desktop\Bajaj-AMC-DevOps\
+New-Item -Path 'Test-GitwithPowershell' -ItemType Directory
+cd .\Test-GitwithPowershell\
+ls
+New-Item -Path 'gitReadme.md' -ItemType File
+git clone git@github.com:Xmen143/rupesh-resume.git
+cd .\rupesh-resume\
+ls
+Copy-Item '.\rupesh.pdf' '../'
+cd ../
+ls
+cd .\rupesh-resume\
+#Copy-Item -Filter *.txt -Path 'D:\temp\Test Folder' -Recurse -Destination 'D:\temp\Test Folder1'
+cd ../
+Remove-Item 'rupesh.pdf'
+Move-Item '.\gitReadme.md' '.\rupesh-resume\'
+cd .\rupesh-resume\
+Rename-Item '.\rupesh.pdf rupesh_devop.pdf'
+Rename-Item '.\rupesh.pdf'
+ls
+#
+Test-Path
+#
+Test-Path
+dir env:
+$env:AZURE_RESOURCE_GROUP = 'MyTestResourceGroup'
+dir env:
+[System.Environment]::SetEnvironmentVariable('ResourceGroup','AZ_Resource_Group')
+dir env:
+Get-DAte
+#set-date -Date (Get-Date).AddDays(-1)
+Get-Date -DisplayHint Time
+New-Item powershell.txt 
+Set-Content powershell.txt 'Welcome to TutorialsPoint'
+get-content .\powershell.txt
+#New-Item D:\temp\test\test.xml -ItemType File
+Clear-Content .\powershell.txt
+Get-COntent .\powershell.txt
+Set-Content powershell.txt 'Welcome to TutorialsPoint'
+Add-CONtent .\powershell.txt 'Hello i am rupesh here creating file adding text with powershell'
+get-content .\powershell.txt
+$list = "one","two","two","three","four","five"
+$list
+list | sort | get-unique
+$list | sort | get-unique
+$A = Get-ChildItem .\powershell.txt
+Format-List -InputObject $A
+Get-Service 
+Get-Service | format-list
+Get-Service | Where-Object {$_.Status -eq "Stopped"}
+Get-Process | Where-Object {$_.ProcessName -Match "^p.*"}
+Get-ChildItem -Name
+"Microsoft.PowerShell.Core", "Microsoft.PowerShell.Host" | ForEach-Object {$_.Split(".")}
+#get-history
+Start-Sleep -s 15
+$choice = Read-Host "Please put your choice"
+$choice
+Get-Process | Select-Object -Property ProcessName, Id, WS -Last 5
+"d","e","c","a","b","f" | Sort-Object
+"d","e","c","a","b","f", "a" | Select-Object Unquie
+"d","e","c","a","b","f", "a" | Select-Object Unique
+"a","b","c","a","a","a" | Select-Object -Unique
+Write-Warning  "Test Warning"
+Write-Host (2,4,6,8,10,12) -Separator ", -> " -ForegroundColor DarkGreen -BackgroundColor White
+Write-Host "Hello Iam Rupesh" -ForegroundColor Red -BackgroundColor Blue
+Invoke-Item .\powershell.txt
+# Open the file in notepad
+> $Command = 'Get-Process'
+> $Command
+Get-Process
+> Invoke-Expression $Command 
+> Invoke-Expression $Command 
+Invoke-Expression $Command 
+$Command 
+$Command = Get-Process
+$Command 
+Invoke-Expression $Command 
+get-history
